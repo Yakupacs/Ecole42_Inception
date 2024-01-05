@@ -4,7 +4,7 @@
 
 
 ## Description
-##### This project aims to broaden your knowledge of system administration by using Docker. You will virtualize several Docker images, creating them in your new personal virtual machine.
+This project aims to broaden your knowledge of system administration by using Docker. You will virtualize several Docker images, creating them in your new personal virtual machine.
 
 <img width="500" alt="Screenshot 2024-01-06 at 02 13 45" src="https://github.com/Yakupacs/Ecole42_Inception/assets/73075252/a6d25237-bf78-4cc7-a21b-fedf47bfcd6b">
 
