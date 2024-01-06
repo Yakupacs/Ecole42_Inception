@@ -31,7 +31,7 @@ services:
       - .env
 
   wordpress:
-    container_name: wordpress
+    container_name: wordpress 
     depends_on:
       - mariadb
     build:
