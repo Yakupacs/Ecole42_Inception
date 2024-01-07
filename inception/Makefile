@@ -1,17 +1,15 @@
-DC := docker-compose -f ./srcs/docker-compose.yml
+all: data db wp up
 
-all:
-	@mkdir -p /home/data/wordpress
-	@mkdir -p /home/data/mysql
-	@$(DC) up -d --build
+up:
+	docker-compose -f ./srcs/docker-compose.yml up -d
+data:
+	mkdir /home/yacis/data
+db:
+	mkdir /home/yacis/data/db
+wp:
+	mkdir /home/yacis/data/wp
 
 down:
-	@$(DC) down
+	docker-compose -f ./srcs/docker-compose.yml down
 
-re: clean all
-
-clean:
-	@$(DC) down -v --remove-orphans
-	@docker rmi -f $$(docker images -q)
-
-.PHONY: all down re clean
+.PHONY: up data db wp down
