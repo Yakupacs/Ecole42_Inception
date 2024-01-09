@@ -12,6 +12,8 @@ services:
     restart: always
     networks:
       - network
+    env_file:
+      - .env
 
   mariadb:
     container_name: mariadb
