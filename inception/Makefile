@@ -3,8 +3,8 @@
 # -a: --all
 # $$: escape $ for shell
 all:
-	@mkdir -p $(HOME)/data/wordpress
-	@mkdir -p $(HOME)/data/mariadb
+	@mkdir -p $(HOME)/yacis/data/wordpress
+	@mkdir -p $(HOME)/yacis/data/mariadb
 	@docker-compose -f ./srcs/docker-compose.yml up
 
 down:
@@ -19,7 +19,7 @@ clean:
 	docker rmi -f $$(docker images -qa);\
 	docker volume rm $$(docker volume ls -q);\
 	docker network rm $$(docker network ls -q);\
-	rm -rf $(HOME)/data/wordpress
-	rm -rf $(HOME)/data/mariadb
+	rm -rf $(HOME)/yacis/data/wordpress
+	rm -rf $(HOME)/yacis/data/mariadb
 
 .PHONY: all re down clean
